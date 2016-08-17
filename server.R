@@ -4,7 +4,7 @@ nomevariaveis <- colnames(dados)
 
 #Tratando dados do sumário
 linhas <- length(dados)
-matrizsumario <- matrix(NA, nrow=linhas, ncol=6)
+matrizsumario <- matrix(NA, nrow=linhas, 
 dimnames(matrizsumario) = (list(nomevariaveis, c("Min.", "1st Qu.", "Median", "Mean", "3rd Qu.", "Max.")))
 for (i in 1:linhas) {
   matrizsumario[i,] <- c(min(dados[,i]), quantile(dados[, i], 0.25), median(dados[, i]), mean(dados[, i]), quantile(dados[, i], 0.75), max(dados[, i]))
